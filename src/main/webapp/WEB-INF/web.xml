@@ -41,6 +41,10 @@
     	<url-pattern>/resources/content/CSS/app.css</url-pattern>
 	</servlet-mapping>
 	
+	<servlet-mapping>
+    	<servlet-name>appServlet</servlet-name>
+    	<url-pattern>/resources/content/IMG/fondo.jpg</url-pattern>
+	</servlet-mapping>
 
 
 

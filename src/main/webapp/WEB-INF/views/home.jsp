@@ -10,14 +10,10 @@
 	<title>Home</title>
 	
 </head>
-<body>
+<body style="background: url('https://i.pinimg.com/originals/21/1c/a2/211ca2e29e4736d9f6e1fad62f97bc48.jpg');">
+  
 <header>
-      <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle></button>
-            <div class="title-bar-title">Menu</div>
-        </div>
-
-        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+     <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
             <div class="top-bar-left">
                 <style>
                     ul li .menu-text,
@@ -36,9 +32,14 @@
                     }
 
                     body {
-                   
+                  
+                   	 	background-image: url('img/fondo.jpg');
                         background-size: 100%;
-
+							  
+                    }
+                    .styletitle{
+                      	color: white;
+    					background: #230d0d;
                     }
                 </style>
                 <ul class="dropdown menu" data-dropdown-menu>
@@ -53,19 +54,32 @@
         </div>
     </header>
     <br>
-    <section class="" style="background: #040E44">
+    
+    <section class="">
         <div class="grid-container">
+        	<h2 class="styletitle text-center">LISTA DE CANCIONES</h2>
             <div class="grid-x grid-margin-x small-up-2 medium-up-3">
             	<c:forEach var="cancion" items="${listaCanciones}">
 			<div class="cell">
-                <div class="card">
+                <div class="card" style="background: #212526a8;">
                 
                   <div class="card-section">
-                  <h4><c:out value="${cancion.nombre }"></c:out> </h4>
-                    <p>This row of cards is embedded in an X-Y Block Grid.</p>
+                  
+                  	<h4 class="text-center" style="color: #ffffff;"><c:out value="${cancion.nombre }"></c:out></h4>
+                    
+                      <div class="grid-container">
+                        <div class="grid-x grid-margin-x small-up-1 medium-up-2">
+                            <div class="cell">
+                                <p style="color: #ffffff;;" class="text-center"><c:out value="${cancion.album }"></c:out></p>
+                            </div>
+                            <div class="cell">
+                                <p style="color: #ffffff;;"  class="text-center"><c:out value="${cancion.artista }"></c:out></h4>
+                            </div>
+                        </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+             </div>
 			</c:forEach>
 			
             </div>

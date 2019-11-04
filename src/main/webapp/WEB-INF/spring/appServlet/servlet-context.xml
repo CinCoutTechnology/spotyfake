@@ -10,6 +10,11 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	
 	<resources mapping="/JS/**" location="/JS/" />
+	<annotation-driven />
+	<resources mapping="/img/**" location="/img/" />
+	<annotation-driven />
+	<resources mapping="/imagenes/**" location="/imgenes/**" />
+	
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
@@ -17,7 +22,7 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
-	
+		<resources mapping="/img/**" location="/img/" />
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
